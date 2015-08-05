@@ -59,3 +59,4 @@ gradlew
 *.gz
 *.dat
 *.mca
+.gradle
