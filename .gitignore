@@ -44,3 +44,14 @@ Temporary Items
 
 .metadata
 eclipse/.metadata/
+.gradle/2.0/taskArtifacts/cache.properties.lock
+*.lock
+*.bin
+
+build/
+bin/
+eclipse/
+gradle/
+.settings
+gradlew
+*.properties

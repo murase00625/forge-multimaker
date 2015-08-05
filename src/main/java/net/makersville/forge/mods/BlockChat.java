@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package net.makersville.forge.mods;
 
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
@@ -10,8 +10,8 @@ public class BlockChat {
 	public void sendMessage(BreakEvent event) {
 		
 		String blockType = event.state.getBlock().getLocalizedName();
-		
 		event.getPlayer().addChatComponentMessage(
-				new ChatComponentText(EnumChatFormatting.GOLD + "You broke a " + blockType + "!"));
+				new ChatComponentText(EnumChatFormatting.GOLD +
+						"You broke a " + blockType + "!"));
 	}
 }

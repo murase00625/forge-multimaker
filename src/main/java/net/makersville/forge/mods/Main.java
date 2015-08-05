@@ -1,6 +1,7 @@
 package net.makersville.forge.mods;
 
 import net.makersville.forge.mods.nuclear.*;
+import net.makersville.forge.mods.util.ForgeUtils;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -32,7 +33,7 @@ public class Main {
 		
 		bacon = new Bacon();
 		donut = new Donut();
-		uranium = new Uranium();
+		uranium = Uranium.getObject();
 		glassSword = new GlassSword();
 		uraniumBlock = new UraniumBlock();
 		plumbum = LeadPb.get_lead();

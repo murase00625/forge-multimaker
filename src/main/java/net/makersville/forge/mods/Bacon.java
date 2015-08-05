@@ -1,5 +1,6 @@
 package net.makersville.forge.mods;
 
+import net.makersville.forge.mods.util.PotionSelect;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
