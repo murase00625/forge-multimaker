@@ -1,0 +1,15 @@
+package net.makersville.forge.mods.multimaker;
+
+import net.makersville.forge.mods.multimaker.orchard.OrangeLeaves;
+import net.minecraft.block.Block;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
+public class MultiMakerBlocks {
+
+	public static Block orangeLeaves;
+	
+	public static void createBlocks() {
+		GameRegistry.registerBlock(orangeLeaves = OrangeLeaves.getObject(), OrangeLeaves.NAME);
+	}
+	
+}

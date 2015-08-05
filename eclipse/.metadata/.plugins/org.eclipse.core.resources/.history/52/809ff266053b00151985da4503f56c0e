@@ -1,0 +1,28 @@
+package net.makersville.forge.mods.multimaker.food;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemFood;
+
+public class OrangeFruit extends ItemFood {
+	
+	public static final String NAME = "orangeFruit";
+	
+	private static boolean singleton_created = false;
+	private static Item singleton;
+	
+	public static Item getObject() {
+		if (!singleton_created) {
+			singleton = new OrangeFruit();
+			singleton_created = true;
+		}
+		return singleton;
+	}
+	
+	protected OrangeFruit() {
+		super(5, 1.0f, false);
+		this.setAlwaysEdible();
+		this.setUnlocalizedName(NAME);
+		this.setCreativeTab(CreativeTabs.tabFood);
+	}
+}

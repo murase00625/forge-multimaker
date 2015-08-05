@@ -1,0 +1,36 @@
+package net.makersville.forge.mods.nuclear;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
+public class UraniumOre extends Block {
+	
+	public static final String NAME = "uraniumOre";
+	private static boolean singleton_created = false;
+	private static Block singleton;
+	private Item uraniumDrop;
+	
+	public static Block get_object() {
+		if (!singleton_created) {
+			singleton = new UraniumOre();
+		}
+		return singleton;
+	}
+	
+	public UraniumOre() {
+		super(Material.rock);
+		singleton_created = true;
+		this.setUnlocalizedName(NAME);
+		this.setCreativeTab(CreativeTabs.tabBlock);
+		this.setLightLevel(0.4f);
+		
+		GameRegistry.registerBlock(this, NAME);
+	}
+	
+	private int meta;
+	private int least;
+	private int most;
+}

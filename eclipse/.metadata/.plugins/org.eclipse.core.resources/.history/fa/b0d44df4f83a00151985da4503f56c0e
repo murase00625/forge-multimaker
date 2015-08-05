@@ -1,0 +1,9 @@
+package net.makersville.forge.mods.multimaker;
+
+import net.minecraft.item.ItemFood;
+
+public class Orange extends ItemFood {
+	public Orange() {
+		super(5, 1.0f, true);
+	}
+}

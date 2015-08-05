@@ -1,0 +1,23 @@
+package net.makersville.forge.mods.multimaker;
+
+import net.makersville.forge.mods.multimaker.food.Lemon;
+import net.makersville.forge.mods.multimaker.food.OrangeFruit;
+import net.makersville.forge.mods.util.ForgeUtils;
+import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
+public final class Items {
+	
+	public static Item orange;
+	public static Item lemon;
+	
+	public static void createItems() {
+		GameRegistry.registerItem(orange = OrangeFruit.getObject(), OrangeFruit.NAME);
+		GameRegistry.registerItem(lemon = Lemon.getObject(), Lemon.NAME);
+	}
+	
+	public static void renderItems() {
+		ForgeUtils.renderItem(MultiMaker.MODID, OrangeFruit.NAME);
+		ForgeUtils.renderItem(MultiMaker.MODID, Lemon.NAME);
+	}
+}

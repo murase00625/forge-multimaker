@@ -1,0 +1,10 @@
+package net.makersville.forge.mods.multimaker.orchard;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+
+public class OrangeLeaves extends Block {
+	protected OrangeLeaves() {
+		super(Material.leaves);
+	}
+}

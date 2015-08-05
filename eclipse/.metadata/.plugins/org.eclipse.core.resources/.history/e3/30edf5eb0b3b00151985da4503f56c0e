@@ -1,0 +1,13 @@
+package net.makersville.forge.mods.multimaker;
+
+import net.minecraft.block.Block;
+
+public class MultiMakerBlocks {
+
+	public static Block orangeLeaves;
+	
+	public static void createBlocks() {
+		
+	}
+	
+}

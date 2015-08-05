@@ -1,0 +1,6 @@
+{
+    "parent": "makersville:item/standardItem",
+    "textures": {
+        "layer0": "makersville:item/orangeFruit"
+    }
+}

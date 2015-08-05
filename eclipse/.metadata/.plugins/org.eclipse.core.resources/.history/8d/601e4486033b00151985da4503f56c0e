@@ -1,0 +1,6 @@
+{
+    "parent": "multimaker:item/standardItem",
+    "textures": {
+        "layer0": "multimaker:item/orangeFruit"
+    }
+}
