@@ -1,5 +1,0 @@
-package net.makersville.forge.mods;
-
-public interface SingletonItem {
-
-}

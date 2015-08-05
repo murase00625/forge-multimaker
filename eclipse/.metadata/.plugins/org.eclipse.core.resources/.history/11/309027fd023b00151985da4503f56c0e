@@ -1,7 +1,0 @@
-package net.makersville.forge.mods.multimaker.food;
-
-import ItemFood;
-
-public class Lemon extends ItemFood {
-
-}

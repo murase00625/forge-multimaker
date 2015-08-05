@@ -1,6 +1,0 @@
-package net.makersville.forge.mods.multimaker;
-
-public final class Items {
-	public static void createItems() {
-    }
-}

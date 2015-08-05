@@ -1,7 +1,0 @@
-package net.makersville.forge.mods;
-
-import net.minecraft.item.Item;
-
-public abstract class SingletonItem {
-	public static Item get_object();
-}
