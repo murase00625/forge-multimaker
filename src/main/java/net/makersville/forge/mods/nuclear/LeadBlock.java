@@ -28,6 +28,6 @@ public class LeadBlock extends Block {
 	}
 	
 	public LeadBlock() {
-		this(LeadPb.get_lead());
+		this(LeadPb.getObject());
 	}
 }

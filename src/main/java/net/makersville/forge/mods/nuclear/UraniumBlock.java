@@ -21,7 +21,7 @@ public class UraniumBlock extends Block {
 				"uuu",
 				"uuu",
 				"uuu",
-				'u', Main.uranium);
+				'u', Uranium.getObject());
 	}
 	
 

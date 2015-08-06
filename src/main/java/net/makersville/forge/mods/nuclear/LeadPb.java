@@ -15,7 +15,7 @@ public class LeadPb extends Item {
 	private static LeadPb singleton_lead;
 	private static boolean singleton_created = false;
 	
-	public static LeadPb get_lead() {
+	public static LeadPb getObject() {
 		if (!singleton_created) {
 			singleton_lead = new LeadPb();
 		}
