@@ -13,18 +13,7 @@ public class Uranium extends Item {
 	public static ToolMaterial URANIUM = 
 			EnumHelper.addToolMaterial("URANIUM", 3, 1234, 10f, 3.6f, 6);
 	
-	private static boolean singleton_created = false;
-	private static Item singleton;
-	
-	public static Item getObject() {
-		if (!singleton_created) {
-			singleton = new Uranium();
-			singleton_created = true;
-		}
-		return singleton;
-	}
-	
-	protected Uranium() {
+	public Uranium() {
 		super();
 		this.setUnlocalizedName(NAME);
 		this.setCreativeTab(CreativeTabs.tabMaterials);

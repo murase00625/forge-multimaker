@@ -26,8 +26,4 @@ public class LeadBlock extends Block {
 
 		GameRegistry.addRecipe(new ItemStack(plumbum, 4), "b", 'b', this);
 	}
-	
-	public LeadBlock() {
-		this(LeadPb.getObject());
-	}
 }

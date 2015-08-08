@@ -1,6 +1,7 @@
 package net.makersville.forge.mods.multimaker;
 
 import net.makersville.forge.mods.nuclear.LeadBlock;
+import net.makersville.forge.mods.nuclear.Uranium;
 import net.makersville.forge.mods.nuclear.UraniumBlock;
 import net.makersville.forge.mods.nuclear.UraniumOre;
 import net.makersville.forge.mods.util.ForgeUtils;
@@ -13,9 +14,9 @@ public class MultiMakerBlocks {
 	public static Block uraniumBlock;
 	
 	public static void createBlocks() {
-		uraniumOre = UraniumOre.getObject();
-		leadBlock = new LeadBlock();
-		uraniumBlock = new UraniumBlock();
+		uraniumOre = new UraniumOre((Uranium) MultiMakerItems.uranium);
+		leadBlock = new LeadBlock(MultiMakerItems.plumbum);
+		uraniumBlock = new UraniumBlock((Uranium) MultiMakerItems.uranium);
 	}
 	
 	public static void renderBlocks() {

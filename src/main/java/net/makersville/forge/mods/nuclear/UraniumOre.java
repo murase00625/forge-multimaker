@@ -17,27 +17,21 @@ public class UraniumOre extends Block {
 	
 	public static final String NAME = "uraniumOre";
 	
-	private static boolean singleton_created = false;
-	private static Block singleton;
 	
-	public static Block getObject() {
-		if (!singleton_created) {
-			singleton = new UraniumOre();
-			singleton_created = true;
-		}
-		return singleton;
-	}
-	
-	protected UraniumOre() {
-		super(Material.rock);
+	protected void defaultBlockSettings() {
 		this.setUnlocalizedName(NAME);
 		this.setCreativeTab(CreativeTabs.tabBlock);
-		this.uraniumDrop = Uranium.getObject();
 		this.setHardness(15f);
 		this.setResistance(20f);
 		this.setHarvestLevel("pickaxe", 2);
 		
 		GameRegistry.registerBlock(this, NAME);
+	}
+	
+	public UraniumOre(Uranium drop) {
+		super(Material.rock);
+		this.uraniumDrop = drop;
+		defaultBlockSettings();
 	}
 
 	@Override

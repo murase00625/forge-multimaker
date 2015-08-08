@@ -1,5 +1,9 @@
 package net.makersville.forge.mods.multimaker;
 
+import net.makersville.forge.mods.multimaker.orchard.FruitDrops;
+import net.makersville.forge.mods.multimaker.orchard.OrangeFruit;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -24,6 +28,23 @@ public class MultiMaker {
 	@EventHandler
     public void preInit(FMLPreInitializationEvent e) {
 		this.proxy.preInit(e);
+		
+		Configuration config = new Configuration(e.getSuggestedConfigurationFile());
+		config.load();
+		
+		String orangeDropBiomes[] = FruitDrops.ORANGE_BIOMES;
+		orangeDropBiomes =
+			config.get("Orchard", "OrangeDropBiomes", orangeDropBiomes).getStringList();
+		int orangeDropChances[] = FruitDrops.ORANGE_CHANCES;
+		orangeDropChances =
+			config.get("Orchard", "OrangeDropChances", orangeDropChances).getIntList();
+		
+		config.save();
+		
+		FruitDrops fd = new FruitDrops();
+		fd.setBiomeHashes(OrangeFruit.NAME, orangeDropBiomes, orangeDropChances);
+		
+		MinecraftForge.EVENT_BUS.register(fd);
     }
 
     @EventHandler

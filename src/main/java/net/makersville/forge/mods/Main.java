@@ -39,12 +39,13 @@ public class Main {
 		
 		bacon = new Bacon();
 		donut = new Donut();
-		uranium = Uranium.getObject();
+		uranium = new Uranium();
 		glassSword = new GlassSword();
-		uraniumBlock = new UraniumBlock();
-		plumbum = LeadPb.getObject();
-		leadBlock = new LeadBlock();
-		uraniumOre = UraniumOre.getObject();
+		uraniumBlock = new UraniumBlock((Uranium) uranium);
+		((UraniumBlock) uraniumBlock).setRecipe((Uranium) uranium);
+		plumbum = new LeadPb();
+		leadBlock = new LeadBlock(plumbum);
+		uraniumOre = new UraniumOre((Uranium) uranium);
 		
 		if (event.getSide() == Side.CLIENT) {
 			ForgeUtils.renderItem(MODID, Bacon.NAME);

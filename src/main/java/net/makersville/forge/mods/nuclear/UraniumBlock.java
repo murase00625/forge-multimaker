@@ -10,18 +10,26 @@ public class UraniumBlock extends Block {
 	
 	public static final String NAME = "uraniumBlock";
 	
-	public UraniumBlock() {
+	public UraniumBlock(Uranium uranium) {
 		super(new Uranium.UraniumMaterial());
+		defaultSettings();
+		this.setRecipe(uranium);
+	}
+	
+	public void defaultSettings() {
 		this.setUnlocalizedName(NAME);
 		this.setCreativeTab(CreativeTabs.tabBlock);
 		this.setLightLevel(0.85f);
 		
 		GameRegistry.registerBlock(this, NAME);
+	}
+	
+	public void setRecipe(Uranium u) {
 		GameRegistry.addRecipe(new ItemStack(this),
 				"uuu",
 				"uuu",
 				"uuu",
-				'u', Uranium.getObject());
+				'u', u);
 	}
 	
 

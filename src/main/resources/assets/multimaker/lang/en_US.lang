@@ -3,5 +3,6 @@ item.donut.name=Mmm... Donut
 item.glassSword.name=Glass Sword
 item.uranium.name=Uranium
 item.plumbum.name=Lead (Pb)
+item.orangeFruit.name=Orange
 tile.uraniumBlock.name=Block of Uranium
 tile.leadBlock.name=Block of Lead

@@ -15,13 +15,6 @@ public class LeadPb extends Item {
 	private static LeadPb singleton_lead;
 	private static boolean singleton_created = false;
 	
-	public static LeadPb getObject() {
-		if (!singleton_created) {
-			singleton_lead = new LeadPb();
-		}
-		return singleton_lead;
-	}
-	
 	public static ToolMaterial LEAD =
 			EnumHelper.addToolMaterial("LEAD", 1, 50, 2f, 1f, 1);
 	
