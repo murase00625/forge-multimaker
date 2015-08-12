@@ -12,6 +12,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class FruitDrops {
 	
+	// The indices for the various data values used to calculate drop rate
+	// based on biome temp and rainfall.
 	private static final int BASE_CHANCE = 0;
 	private static final int DEVIATION = 1;
 	private static final int OPTIMAL_TEMP = 2;
@@ -21,26 +23,11 @@ public class FruitDrops {
 	private static final int RAIN_MAX = 6;
 	private static final int MAX_DROP = 7;
 	
-	// The preferred default biomes for custom fruit to be harvested from vanilla Leaves blocks.
-	// Base biomes are preferred overall, but variant names are also acceptable.
-	public static final String ORANGE_BIOMES[] =
-		{"Plains", "Forest", "Swampland", "River", "Jungle", "Hills"};
-	
-	// The chances in each preferred biome, 10 < chance < 19
-	public static final int ORANGE_CHANCES[] =
-		{10, 14, 18, 18, 14, 10};
-	
 	// New way: Always go with the biome's temperature and rainfall values.
-	// If the temp is close to the optimal temp (3rd value), 
+	// If the temp is close to the optimal temp (3rd value), make it more likely
+	// to drop the fruit.
 	public static final float ORANGE_SETTINGS[] =
 		{14.0f, 4.0f, 0.7f, 0.49f, 0.91f, 0.2f, 0.9f, 2f};
-	
-	// To deal with variant biomes, we use the temperature range.
-	// The base chance for, and the bounds of, any acceptable temp range for the fruit
-	private static final int ORANGE_BASE_CHANCE = 8;
-	private static final float ORANGE_TEMP_MIN = 0.49f;
-	private static final float ORANGE_TEMP_MAX = 0.91f;
-	private static final float ORANGE_MIN_RAINFALL = 0.2f;
 	
 	private static final int RAND_MAX = 100;
 	
