@@ -15,6 +15,7 @@ public class OrangeFruit extends ItemFood implements DroppableFruit {
 	private float DROP_SETTINGS[] =
 		{14.0f, 4.0f, 0.7f, 0.49f, 0.91f, 0.2f, 0.9f, 2f};
 	
+	@Override
 	public float[] getDrops() {
 		return DROP_SETTINGS;
 	}
@@ -25,6 +26,11 @@ public class OrangeFruit extends ItemFood implements DroppableFruit {
 		this.setUnlocalizedName(NAME);
 		
 		GameRegistry.registerItem(this, NAME);
+	}
+
+	@Override
+	public String getName() {
+		return "Orange";
 	}
 	
 }

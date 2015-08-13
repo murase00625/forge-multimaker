@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import net.makersville.forge.mods.multimaker.MultiMakerItems;
+import net.minecraft.client.Minecraft;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
@@ -16,7 +17,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class FruitDrops {
 	
 	// The indices for the various data values used to calculate drop rate
-	// based on biome temp and rainfall.
+	//  based on biome temp and rainfall.
 	private static final int BASE_CHANCE = 0;
 	private static final int DEVIATION = 1;
 	private static final int OPTIMAL_TEMP = 2;
@@ -31,7 +32,11 @@ public class FruitDrops {
 	private ArrayList<DroppableFruit> fruitList;
 	
 	public FruitDrops() {
-		fruitList.add((DroppableFruit) MultiMakerItems.orange);
+		fruitList = new ArrayList<DroppableFruit>();
+	}
+	
+	public void addFruit(DroppableFruit fruit) {
+		fruitList.add(fruit);
 	}
 	
 	@SubscribeEvent
@@ -45,10 +50,10 @@ public class FruitDrops {
 			
 			for (DroppableFruit fruit : fruitList) {
 				settings = fruit.getDrops();
-				if (settings.length != 7) {
-					evt.state.getPlayer().addChatComponentMessage(
-							new ChatComponentText(EnumChatFormatting.GOLD +
-									"Something is seriously wrong with t!"));
+				if (settings == null || settings.length != 7 && evt.harvester != null) {
+					evt.harvester.addChatComponentMessage(
+							new ChatComponentText(EnumChatFormatting.RED +
+									"The settings on " + fruit.getName() + " are incorrect!"));
 				} else if (fruitDropped(fruit.getDrops(), biome, rand)) {
 					int drop = rand.nextInt((int) fruit.getDrops()[MAX_DROP]) + 1;
 					evt.drops.add(new ItemStack(MultiMakerItems.orange, drop));

@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "modid": "multimaker",
+  "name": "MultiMaker",
+  "description": "Sample project demonstrating multiple modifications.",
+  "version": "0.1 alpha",
+  "mcversion": "1.8",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Morio Murase"],
+  "credits": "The Forge and FML guys, for making Forge",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

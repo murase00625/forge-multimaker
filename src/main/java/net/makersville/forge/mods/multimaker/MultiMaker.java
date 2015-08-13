@@ -36,6 +36,8 @@ public class MultiMaker {
 		
 		FruitDrops fd = new FruitDrops();
 		
+		MultiMakerItems.assignFruit(fd);
+		
 		MinecraftForge.EVENT_BUS.register(fd);
     }
 

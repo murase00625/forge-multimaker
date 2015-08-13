@@ -1,5 +1,7 @@
 package net.makersville.forge.mods.multimaker;
 
+import net.makersville.forge.mods.multimaker.orchard.DroppableFruit;
+import net.makersville.forge.mods.multimaker.orchard.FruitDrops;
 import net.makersville.forge.mods.multimaker.orchard.OrangeFruit;
 import net.makersville.forge.mods.multimaker.physics.LeadPb;
 import net.makersville.forge.mods.multimaker.physics.Uranium;
@@ -16,6 +18,11 @@ public class MultiMakerItems {
 		uranium = new Uranium();
 		plumbum = new LeadPb();
 		orange = new OrangeFruit();
+		
+	}
+	
+	public static void assignFruit(FruitDrops fd) {
+		fd.addFruit((DroppableFruit) orange);
 	}
 	
 	public static void renderItems() {
