@@ -1,9 +1,9 @@
 package net.makersville.forge.mods.multimaker;
 
-import net.makersville.forge.mods.nuclear.LeadBlock;
-import net.makersville.forge.mods.nuclear.Uranium;
-import net.makersville.forge.mods.nuclear.UraniumBlock;
-import net.makersville.forge.mods.nuclear.UraniumOre;
+import net.makersville.forge.mods.multimaker.physics.LeadBlock;
+import net.makersville.forge.mods.multimaker.physics.Uranium;
+import net.makersville.forge.mods.multimaker.physics.UraniumBlock;
+import net.makersville.forge.mods.multimaker.physics.UraniumOre;
 import net.makersville.forge.mods.util.ForgeUtils;
 import net.minecraft.block.Block;
 

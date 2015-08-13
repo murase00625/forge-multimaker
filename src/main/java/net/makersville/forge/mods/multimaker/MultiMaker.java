@@ -32,17 +32,9 @@ public class MultiMaker {
 		Configuration config = new Configuration(e.getSuggestedConfigurationFile());
 		config.load();
 		
-		String orangeDropBiomes[] = FruitDrops.ORANGE_BIOMES;
-		orangeDropBiomes =
-			config.get("Orchard", "OrangeDropBiomes", orangeDropBiomes).getStringList();
-		int orangeDropChances[] = FruitDrops.ORANGE_CHANCES;
-		orangeDropChances =
-			config.get("Orchard", "OrangeDropChances", orangeDropChances).getIntList();
-		
 		config.save();
 		
 		FruitDrops fd = new FruitDrops();
-		fd.setBiomeHashes(OrangeFruit.NAME, orangeDropBiomes, orangeDropChances);
 		
 		MinecraftForge.EVENT_BUS.register(fd);
     }

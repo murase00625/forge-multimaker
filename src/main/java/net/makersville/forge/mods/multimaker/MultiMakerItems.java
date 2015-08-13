@@ -1,8 +1,8 @@
 package net.makersville.forge.mods.multimaker;
 
 import net.makersville.forge.mods.multimaker.orchard.OrangeFruit;
-import net.makersville.forge.mods.nuclear.LeadPb;
-import net.makersville.forge.mods.nuclear.Uranium;
+import net.makersville.forge.mods.multimaker.physics.LeadPb;
+import net.makersville.forge.mods.multimaker.physics.Uranium;
 import net.makersville.forge.mods.util.ForgeUtils;
 import net.minecraft.item.Item;
 

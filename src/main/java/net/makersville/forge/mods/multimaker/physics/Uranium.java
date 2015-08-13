@@ -1,4 +1,4 @@
-package net.makersville.forge.mods.nuclear;
+package net.makersville.forge.mods.multimaker.physics;
 
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;

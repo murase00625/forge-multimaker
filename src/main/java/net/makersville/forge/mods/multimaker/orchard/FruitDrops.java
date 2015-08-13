@@ -1,11 +1,14 @@
 package net.makersville.forge.mods.multimaker.orchard;
 
-import java.util.Hashtable;
+import java.util.ArrayList;
 import java.util.Random;
 
 import net.makersville.forge.mods.multimaker.MultiMakerItems;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -23,22 +26,12 @@ public class FruitDrops {
 	private static final int RAIN_MAX = 6;
 	private static final int MAX_DROP = 7;
 	
-	// New way: Always go with the biome's temperature and rainfall values.
-	// If the temp is close to the optimal temp (3rd value), make it more likely
-	// to drop the fruit.
-	public static final float ORANGE_SETTINGS[] =
-		{14.0f, 4.0f, 0.7f, 0.49f, 0.91f, 0.2f, 0.9f, 2f};
-	
 	private static final int RAND_MAX = 100;
 	
-	private Hashtable<String,Integer> orangeDrop = new Hashtable();
+	private ArrayList<DroppableFruit> fruitList;
 	
-	public void setBiomeHashes(String fruitName, String[] biomes, int[] chances) {
-		if (fruitName == OrangeFruit.NAME) {
-			for (int i = 0; i < biomes.length; i++) {
-				orangeDrop.put(biomes[i], chances[i]);
-			}
-		}
+	public FruitDrops() {
+		fruitList.add((DroppableFruit) MultiMakerItems.orange);
 	}
 	
 	@SubscribeEvent
@@ -48,10 +41,20 @@ public class FruitDrops {
 			Random rand = evt.world.rand;
 			BiomeGenBase biome = evt.world.getBiomeGenForCoords(evt.pos);
 			
-			if (fruitDropped(ORANGE_SETTINGS, biome, rand)) {
-				int drop = rand.nextInt((int) ORANGE_SETTINGS[MAX_DROP]) + 1;
-				evt.drops.add(new ItemStack(MultiMakerItems.orange, drop));
-			}	
+			float settings[];
+			
+			for (DroppableFruit fruit : fruitList) {
+				settings = fruit.getDrops();
+				if (settings.length != 7) {
+					evt.state.getPlayer().addChatComponentMessage(
+							new ChatComponentText(EnumChatFormatting.GOLD +
+									"Something is seriously wrong with t!"));
+				} else if (fruitDropped(fruit.getDrops(), biome, rand)) {
+					int drop = rand.nextInt((int) fruit.getDrops()[MAX_DROP]) + 1;
+					evt.drops.add(new ItemStack(MultiMakerItems.orange, drop));
+				}	
+			}
+			
 		}
 	}
 	
