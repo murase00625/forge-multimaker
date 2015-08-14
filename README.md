@@ -1,4 +1,4 @@
-# MultiMaker mod for Minecraft forge
+# MultiMaker mod for Minecraft Forge
 
 ## About
 This is an educational mod for use in Java coding lessons, designed to show how a complex mod with multiple custom elements work. Although the code usually builds and runs fine in single player, it's still very experimental and might not work in your environment.
