@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import net.makersville.forge.mods.multimaker.MultiMakerItems;
-import net.minecraft.client.Minecraft;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
@@ -54,7 +53,7 @@ public class FruitDrops {
 				if (settings == null || settings.length != 8 && evt.harvester != null) {
 					evt.harvester.addChatComponentMessage(
 							new ChatComponentText(EnumChatFormatting.RED +
-									"The settings on " + fruit.getName() + " are incorrect!"));
+									"The settings on " + ((ItemFood) fruit).getUnlocalizedName() + " are incorrect!"));
 				} else if (fruitDropped(fruit.getDropStats(), biome, rand)) {
 					int drop = rand.nextInt((int) fruit.getDropStats()[MAX_DROP]) + 1;
 					evt.drops.add(new ItemStack(MultiMakerItems.orange, drop));

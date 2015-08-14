@@ -13,12 +13,12 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  * In particular, any custom items/blocks/entities, crafting or smelting recipes,
  * and anything else that's related to setting up the mod's custom world.
  * 
- * Sided proxies are necessary because the server doesn't need to do certain things
+ * Sided proxies are beneficial because the server doesn't need to do certain things
  * essential to the client, like render graphics or playback audio. All the server
  * needs to be concerned with is creating and updating the game world and everything
  * in it. In Minecraft 1.8 and later, this separation of tasks is now enforced, and
  * any attempt to set up graphic rendering or audio playback on the server will trigger
- * an error.
+ * a warning.
  * 
  * Note that all of the methods in the CommonProxy are called from the main mod class,
  * in this case MultiMaker. Forge will automatically detect which subclass is
@@ -33,6 +33,7 @@ public class CommonProxy {
 	
 	// While the main class uses the @EventHandler annotation, the proxy classes don't
 	// need it because the main class calls these methods.
+	
 	// Initialize any custom objects (entities, items, blocks) in the preInit method.
 	// Don't try to set up renderers here, the ServerProxy subclass will throw an
 	// error!

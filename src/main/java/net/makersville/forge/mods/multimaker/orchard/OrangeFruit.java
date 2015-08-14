@@ -27,10 +27,5 @@ public class OrangeFruit extends ItemFood implements DroppableFruit {
 		
 		GameRegistry.registerItem(this, NAME);
 	}
-
-	@Override
-	public String getName() {
-		return "Orange";
-	}
 	
 }

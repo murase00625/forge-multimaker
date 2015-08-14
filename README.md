@@ -11,15 +11,15 @@ You will need:
 Highly recommended:
 * An IDE (integrated development environment) that plays well with Forge. Eclipse and IntelliJ IDEA work well.
 
-Set up the workspace according to the instructions at http://www.minecraftforge.net/wiki/Installation/Source
+Set up the workspace according to the instructions at [the official Forge wiki.] (http://www.minecraftforge.net/wiki/Installation/Source)
 
 ## How to use
 
-For now, download the repo as a ZIP file (or clone it) and copy the contents of src into the src folder of your Forge source tree.
+For now, download the repo as a ZIP file (or clone it) and copy the contents of `src` into the `src` folder of your Forge source tree. I recommend that you have your decompiled workspace `(gradlew setupDecompWorkspace)` already set up before you copy the files.
 
 ## Bugfixes, pull requests, etc.
 
-As this is an experimental project, I'm not accepting patches or pull requests at this time. Those who wish to use this mod as a base for their mods are more than welcome to fork it (see License below).
+As this is an experimental project, I'm not accepting patches or pull requests at this time. Those brave souls who wish to use this mod as a base for their mods are more than welcome to fork it (see License below).
 
 ## License
 
