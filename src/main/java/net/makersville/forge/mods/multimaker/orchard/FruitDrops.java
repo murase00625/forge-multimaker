@@ -50,13 +50,13 @@ public class FruitDrops {
 			float settings[];
 			
 			for (DroppableFruit fruit : fruitList) {
-				settings = fruit.getDrops();
+				settings = fruit.getDropStats();
 				if (settings == null || settings.length != 8 && evt.harvester != null) {
 					evt.harvester.addChatComponentMessage(
 							new ChatComponentText(EnumChatFormatting.RED +
 									"The settings on " + fruit.getName() + " are incorrect!"));
-				} else if (fruitDropped(fruit.getDrops(), biome, rand)) {
-					int drop = rand.nextInt((int) fruit.getDrops()[MAX_DROP]) + 1;
+				} else if (fruitDropped(fruit.getDropStats(), biome, rand)) {
+					int drop = rand.nextInt((int) fruit.getDropStats()[MAX_DROP]) + 1;
 					evt.drops.add(new ItemStack(MultiMakerItems.orange, drop));
 				}	
 			}

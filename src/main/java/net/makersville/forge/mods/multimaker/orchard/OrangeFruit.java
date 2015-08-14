@@ -16,7 +16,7 @@ public class OrangeFruit extends ItemFood implements DroppableFruit {
 		{14.0f, 4.0f, 0.7f, 0.49f, 0.91f, 0.2f, 0.9f, 2f};
 	
 	@Override
-	public float[] getDrops() {
+	public float[] getDropStats() {
 		return DROP_SETTINGS;
 	}
 	

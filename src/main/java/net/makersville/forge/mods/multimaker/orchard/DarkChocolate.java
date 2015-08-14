@@ -16,7 +16,7 @@ public class DarkChocolate extends ItemFood {
 		this.setAlwaysEdible();
 		this.setCreativeTab(CreativeTabs.tabFood);
 		this.setUnlocalizedName(NAME);
-		this.setPotionEffect(Potion.digSpeed.id, 480, 3, 1f);
+		this.setPotionEffect(PotionSelect.HASTE, 480, 3, 1f);
 		
 		GameRegistry.registerItem(this, NAME);
 	}

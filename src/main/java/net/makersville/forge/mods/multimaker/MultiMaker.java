@@ -1,9 +1,8 @@
 package net.makersville.forge.mods.multimaker;
 
 import net.makersville.forge.mods.multimaker.orchard.FruitDrops;
-import net.makersville.forge.mods.multimaker.orchard.OrangeFruit;
+import net.makersville.forge.mods.multimaker.ranching.AnimalDrops;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -22,23 +21,23 @@ public class MultiMaker {
 	@Instance
 	public static MultiMaker instance = new MultiMaker();
 	
-	@SidedProxy(clientSide="net.makersville.forge.mods.multimaker.ClientProxy", serverSide="net.makersville.forge.mods.multimaker.ServerProxy")
+	@SidedProxy(clientSide="net.makersville.forge.mods.multimaker.ClientProxy",
+				serverSide="net.makersville.forge.mods.multimaker.ServerProxy")
 	public static CommonProxy proxy;
 	
 	@EventHandler
     public void preInit(FMLPreInitializationEvent e) {
 		this.proxy.preInit(e);
 		
-		Configuration config = new Configuration(e.getSuggestedConfigurationFile());
-		config.load();
-		
-		config.save();
-		
 		FruitDrops fd = new FruitDrops();
+		AnimalDrops ad = new AnimalDrops();
 		
 		MultiMakerItems.assignFruit(fd);
 		
+		// If there are custom event methods for vanilla Minecraft events,
+		// they must be registered with the Forge event bus.
 		MinecraftForge.EVENT_BUS.register(fd);
+		MinecraftForge.EVENT_BUS.register(ad);
     }
 
     @EventHandler
