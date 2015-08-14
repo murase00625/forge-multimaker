@@ -14,7 +14,7 @@ public class ClientProxy extends CommonProxy {
     public void init(FMLInitializationEvent e) {
         super.init(e);
         
-        MultiMakerItems.renderItems();
+        MultiMakerItems.renderItems(MultiMaker.MODID);
         MultiMakerBlocks.renderBlocks();
     }
 

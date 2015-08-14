@@ -41,6 +41,7 @@ public class FruitDrops {
 	
 	@SubscribeEvent
 	public void dropFruit(BlockEvent.HarvestDropsEvent evt) {
+		
 		if (evt.state.getBlock() == Blocks.leaves) {
 			
 			Random rand = evt.world.rand;
@@ -50,7 +51,7 @@ public class FruitDrops {
 			
 			for (DroppableFruit fruit : fruitList) {
 				settings = fruit.getDrops();
-				if (settings == null || settings.length != 7 && evt.harvester != null) {
+				if (settings == null || settings.length != 8 && evt.harvester != null) {
 					evt.harvester.addChatComponentMessage(
 							new ChatComponentText(EnumChatFormatting.RED +
 									"The settings on " + fruit.getName() + " are incorrect!"));
