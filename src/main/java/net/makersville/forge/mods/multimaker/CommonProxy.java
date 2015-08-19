@@ -25,8 +25,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  * appropriate for the situation.
  * 
  * While this may be overkill for simple modifications to vanilla Minecraft, sooner
- * or later you'll want to make the next ultimate uber-complex mod with all the
- * bells and whistles, and you will need to have proxies in this case.
+ * or later you'll want to make the next ultimate uber-complex MMO mod with all the
+ * bells and whistles, in which case you will need to have proxies.
  *
  */
 public class CommonProxy {

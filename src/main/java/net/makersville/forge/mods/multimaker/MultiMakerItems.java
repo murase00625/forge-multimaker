@@ -5,6 +5,7 @@ import net.makersville.forge.mods.multimaker.orchard.CocoaNibs;
 import net.makersville.forge.mods.multimaker.orchard.DarkChocolate;
 import net.makersville.forge.mods.multimaker.orchard.DroppableFruit;
 import net.makersville.forge.mods.multimaker.orchard.FruitDrops;
+import net.makersville.forge.mods.multimaker.orchard.MilkChocolate;
 import net.makersville.forge.mods.multimaker.orchard.OrangeFruit;
 import net.makersville.forge.mods.multimaker.physics.LeadPb;
 import net.makersville.forge.mods.multimaker.physics.Uranium;
@@ -23,6 +24,7 @@ public class MultiMakerItems {
 	public static Item cocoaNibs;
 	public static Item chocolateLiquor;
 	public static Item darkChocolate;
+	public static Item milkChocolate;
 	
 	public static void createItems() {
 		uranium = new Uranium();
@@ -31,6 +33,7 @@ public class MultiMakerItems {
 		cocoaNibs = new CocoaNibs();
 		chocolateLiquor = new ChocolateLiquor();
 		darkChocolate = new DarkChocolate();
+		milkChocolate = new MilkChocolate();
 	}
 
 	public static void renderItems(String modid) {
@@ -40,6 +43,7 @@ public class MultiMakerItems {
 		ForgeUtils.renderItem(modid, CocoaNibs.NAME);
 		ForgeUtils.renderItem(modid, ChocolateLiquor.NAME);
 		ForgeUtils.renderItem(modid, DarkChocolate.NAME);
+		ForgeUtils.renderItem(modid, MilkChocolate.NAME);
 	}
 	
 	public static void assignFruit(FruitDrops fd) {
@@ -54,6 +58,8 @@ public class MultiMakerItems {
 				new Object[] {cocoaNibs});
 		GameRegistry.addShapelessRecipe(new ItemStack(darkChocolate),
 				new Object[] {chocolateLiquor, Items.sugar});
+		GameRegistry.addShapelessRecipe(new ItemStack(milkChocolate, 4),
+				new Object[] {chocolateLiquor, Items.sugar, Items.milk_bucket});
 	}
 	
 }
