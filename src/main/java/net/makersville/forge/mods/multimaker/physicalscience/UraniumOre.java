@@ -1,4 +1,4 @@
-package net.makersville.forge.mods.multimaker.physics;
+package net.makersville.forge.mods.multimaker.physicalscience;
 
 import java.util.Random;
 
