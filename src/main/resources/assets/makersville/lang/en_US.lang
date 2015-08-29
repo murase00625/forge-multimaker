@@ -1,8 +1,10 @@
 item.chunkyBacon.name=Chunky Bacon
-item.donut.name=Mmm... Donut
+item.donut.name=Donut
 item.glassSword.name=Glass Sword
 item.uranium.name=Uranium
 item.plumbum.name=Lead (Pb)
+item.lemon.name=Lemon
+item.cherry.name=Cherry
 tile.uraniumBlock.name=Block of Uranium
 tile.leadBlock.name=Block of Lead
 tile.uraniumOre.name=Uranium Ore

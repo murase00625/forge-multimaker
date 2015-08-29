@@ -1,10 +1,12 @@
 package net.makersville.forge.mods.multimaker;
 
+import net.makersville.forge.mods.multimaker.orchard.Cherry;
 import net.makersville.forge.mods.multimaker.orchard.ChocolateLiquor;
 import net.makersville.forge.mods.multimaker.orchard.CocoaNibs;
 import net.makersville.forge.mods.multimaker.orchard.DarkChocolate;
 import net.makersville.forge.mods.multimaker.orchard.DroppableFruit;
 import net.makersville.forge.mods.multimaker.orchard.FruitDrops;
+import net.makersville.forge.mods.multimaker.orchard.Lemon;
 import net.makersville.forge.mods.multimaker.orchard.MilkChocolate;
 import net.makersville.forge.mods.multimaker.orchard.OrangeFruit;
 import net.makersville.forge.mods.multimaker.physicalscience.LeadPb;
@@ -25,6 +27,8 @@ public class MultiMakerItems {
 	public static Item chocolateLiquor;
 	public static Item darkChocolate;
 	public static Item milkChocolate;
+	public static Item cherry;
+	public static Item lemon;
 	
 	public static void createItems() {
 		uranium = new Uranium();
@@ -34,6 +38,8 @@ public class MultiMakerItems {
 		chocolateLiquor = new ChocolateLiquor();
 		darkChocolate = new DarkChocolate();
 		milkChocolate = new MilkChocolate();
+		lemon = new Lemon();
+		cherry = new Cherry();
 	}
 
 	public static void renderItems(String modid) {
@@ -44,10 +50,14 @@ public class MultiMakerItems {
 		ForgeUtils.renderItem(modid, ChocolateLiquor.NAME);
 		ForgeUtils.renderItem(modid, DarkChocolate.NAME);
 		ForgeUtils.renderItem(modid, MilkChocolate.NAME);
+		ForgeUtils.renderItem(modid, Lemon.NAME);
+		ForgeUtils.renderItem(modid, Cherry.NAME);
 	}
 	
 	public static void assignFruit(FruitDrops fd) {
 		fd.addFruit((DroppableFruit) orange);
+		fd.addFruit((DroppableFruit) cherry);
+		fd.addFruit((DroppableFruit) lemon);
 	}
 	
 	public static void registerRecipes() {
