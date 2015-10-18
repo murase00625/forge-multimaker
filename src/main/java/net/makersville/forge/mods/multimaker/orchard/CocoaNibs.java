@@ -14,7 +14,7 @@ public class CocoaNibs extends ItemFood {
 		
 		this.setUnlocalizedName(NAME);
 		this.setCreativeTab(CreativeTabs.tabFood);
-		this.setPotionEffect(PotionSelect.SPEED, 120, 1, 0.5f);
+		this.setPotionEffect(PotionSelect.SPEED, 120, 0, 0.5f);
 		this.setAlwaysEdible();
 		
 		GameRegistry.registerItem(this, NAME);

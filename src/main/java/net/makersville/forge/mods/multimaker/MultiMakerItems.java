@@ -1,5 +1,6 @@
 package net.makersville.forge.mods.multimaker;
 
+import net.makersville.forge.mods.GlassSword;
 import net.makersville.forge.mods.multimaker.orchard.Cherry;
 import net.makersville.forge.mods.multimaker.orchard.ChocolateLiquor;
 import net.makersville.forge.mods.multimaker.orchard.CocoaNibs;
@@ -29,6 +30,8 @@ public class MultiMakerItems {
 	public static Item milkChocolate;
 	public static Item cherry;
 	public static Item lemon;
+	public static Item glassSword;
+	public static Item bacon;
 	
 	public static void createItems() {
 		uranium = new Uranium();
@@ -40,6 +43,7 @@ public class MultiMakerItems {
 		milkChocolate = new MilkChocolate();
 		lemon = new Lemon();
 		cherry = new Cherry();
+		glassSword = new GlassSword();
 	}
 
 	public static void renderItems(String modid) {
@@ -52,6 +56,7 @@ public class MultiMakerItems {
 		ForgeUtils.renderItem(modid, MilkChocolate.NAME);
 		ForgeUtils.renderItem(modid, Lemon.NAME);
 		ForgeUtils.renderItem(modid, Cherry.NAME);
+		ForgeUtils.renderItem(modid, GlassSword.NAME);
 	}
 	
 	public static void assignFruit(FruitDrops fd) {
