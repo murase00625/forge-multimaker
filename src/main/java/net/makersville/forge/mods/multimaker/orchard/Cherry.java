@@ -12,7 +12,7 @@ public class Cherry extends ItemFood implements DroppableFruit {
 	// { base chance, deviation, optimal temp, min temp, max temp, min rainfall,
 	//   max rainfall, max number of drops }
 	private float DROP_SETTINGS[] =
-		{10.0f, 3.0f, 0.7f, 0.19f, 0.85f, 0.2f, 0.9f, 2f};
+		{1.0f, 3.0f, 0.7f, 0.19f, 0.85f, 0.2f, 0.9f, 2f};
 		
 	@Override
 	public float[] getDropStats() {

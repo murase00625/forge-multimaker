@@ -65,6 +65,15 @@ public class MultiMakerItems {
 		fd.addFruit((DroppableFruit) lemon);
 	}
 	
+	public static Item getFruitForDrop(DroppableFruit df) {
+		
+		if (df instanceof OrangeFruit) return orange;
+		if (df instanceof Cherry) return cherry;
+		if (df instanceof Lemon) return lemon;
+		
+		return null;
+	}
+	
 	public static void registerRecipes() {
 		GameRegistry.addSmelting(new ItemStack(Items.dye, 1, EnumDyeColor.BROWN.getDyeDamage()),
 				new ItemStack(cocoaNibs), 1f);

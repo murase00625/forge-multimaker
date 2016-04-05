@@ -56,7 +56,8 @@ public class FruitDrops {
 									"The settings on " + ((ItemFood) fruit).getUnlocalizedName() + " are incorrect!"));
 				} else if (fruitDropped(fruit.getDropStats(), biome, rand)) {
 					int drop = rand.nextInt((int) fruit.getDropStats()[MAX_DROP]) + 1;
-					evt.drops.add(new ItemStack(MultiMakerItems.orange, drop));
+					
+					evt.drops.add(new ItemStack(MultiMakerItems.getFruitForDrop(fruit), drop));
 				}	
 			}
 			
