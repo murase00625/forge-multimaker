@@ -12,7 +12,9 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 /**
  * @author Morio Murase
  * 
- * The CommonProxy performs tasks that both client and server sides must perform.
+ */
+
+/** The CommonProxy performs tasks that both client and server sides must perform.
  * In particular, any custom items/blocks/entities, crafting or smelting recipes,
  * and anything else that's related to setting up the mod's custom world.
  * 

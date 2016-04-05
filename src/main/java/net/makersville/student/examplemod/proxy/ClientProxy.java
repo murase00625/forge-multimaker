@@ -1,8 +1,8 @@
 package net.makersville.student.examplemod.proxy;
 
-import net.makersville.forge.mods.multimaker.MultiMaker;
-import net.makersville.forge.mods.multimaker.MultiMakerBlocks;
-import net.makersville.forge.mods.multimaker.MultiMakerItems;
+import net.makersville.student.examplemod.BlockDictionary;
+import net.makersville.student.examplemod.ExampleMod;
+import net.makersville.student.examplemod.ItemDictionary;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -17,8 +17,8 @@ public class ClientProxy extends CommonProxy {
     public void init(FMLInitializationEvent e) {
         super.init(e);
         
-        MultiMakerItems.renderItems(MultiMaker.MODID);
-        MultiMakerBlocks.renderBlocks();
+        ItemDictionary.renderItems(ExampleMod.MODID);
+        BlockDictionary.renderBlocks(ExampleMod.MODID);
     }
 
     @Override

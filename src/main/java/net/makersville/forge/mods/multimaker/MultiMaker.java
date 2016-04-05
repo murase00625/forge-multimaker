@@ -18,13 +18,13 @@ public class MultiMaker {
 	
 	public static final String MODID = "multimaker";
 	public static final String MODNAME = "MultiMaker mod";
-	public static final String VERSION = "0.1 alpha 1";
+	public static final String VERSION = "0.1 alpha 2";
 	
 	@Instance
 	public static MultiMaker instance = new MultiMaker();
 	
-	@SidedProxy(clientSide="net.makersville.forge.mods.multimaker.ClientProxy",
-				serverSide="net.makersville.forge.mods.multimaker.ServerProxy")
+	@SidedProxy(clientSide="net.makersville.forge.mods.multimaker.proxy.ClientProxy",
+				serverSide="net.makersville.forge.mods.multimaker.proxy.ServerProxy")
 	public static CommonProxy proxy;
 	
 	@EventHandler

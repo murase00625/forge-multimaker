@@ -15,11 +15,6 @@ public class ClientProxy extends CommonProxy {
 		modid = id;
 	}
 	
-	public ClientProxy(String modid) {
-		super();
-		this.modid = modid;
-	}
-	
 	@Override
     public void preInit(FMLPreInitializationEvent e) {
         super.preInit(e);
@@ -30,7 +25,7 @@ public class ClientProxy extends CommonProxy {
         super.init(e);
         
         MultiMakerItems.renderItems(modid);
-        MultiMakerBlocks.renderBlocks();
+        MultiMakerBlocks.renderBlocks(modid);
     }
 
     @Override
