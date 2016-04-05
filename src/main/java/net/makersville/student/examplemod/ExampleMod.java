@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-// @Mod(modid = MultiMaker.MODID, name = MultiMaker.MODNAME, version = MultiMaker.VERSION)
+// @Mod(modid = ExampleMod.MODID, name = ExampleMod.MODNAME, version = ExampleMod.VERSION)
 public class ExampleMod {
 	
 	public static final String MODID = "examplemod";
