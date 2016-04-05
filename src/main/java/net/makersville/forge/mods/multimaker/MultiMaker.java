@@ -1,6 +1,8 @@
 package net.makersville.forge.mods.multimaker;
 
 import net.makersville.forge.mods.multimaker.orchard.FruitDrops;
+import net.makersville.forge.mods.multimaker.proxy.ClientProxy;
+import net.makersville.forge.mods.multimaker.proxy.CommonProxy;
 import net.makersville.forge.mods.multimaker.ranching.AnimalDrops;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -38,6 +40,11 @@ public class MultiMaker {
 		// they must be registered with the Forge event bus.
 		MinecraftForge.EVENT_BUS.register(fd);
 		MinecraftForge.EVENT_BUS.register(ad);
+		
+		if (this.proxy instanceof ClientProxy) {
+			((ClientProxy) this.proxy).setModID(MultiMaker.MODID);
+		}
+		
     }
 
     @EventHandler

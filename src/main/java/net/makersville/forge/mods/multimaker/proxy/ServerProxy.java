@@ -1,4 +1,4 @@
-package net.makersville.forge.mods.multimaker;
+package net.makersville.forge.mods.multimaker.proxy;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
