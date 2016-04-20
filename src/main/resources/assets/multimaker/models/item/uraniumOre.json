@@ -1,5 +1,8 @@
 {
-    "parent":"makersville:block/uraniumOre",
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "multimaker:block/uraniumOre"
+    },
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

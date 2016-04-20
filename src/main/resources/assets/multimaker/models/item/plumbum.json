@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "makersville:item/plumbum"
+        "layer0": "multimaker:item/plumbum"
     },
     "display": {
         "thirdperson": {
