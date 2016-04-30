@@ -13,7 +13,7 @@ public class OrangeFruit extends ItemFood implements DroppableFruit {
 	// { base chance, deviation, optimal temp, min temp, max temp, min rainfall,
 	//   max rainfall, max number of drops }
 	private float DROP_SETTINGS[] =
-		{3.0f, 4.0f, 0.7f, 0.49f, 0.91f, 0.2f, 0.9f, 2f};
+		{1.0f, 2.0f, 0.7f, 0.49f, 0.91f, 0.2f, 0.9f, 2f};
 	
 	@Override
 	public float[] getDropStats() {
